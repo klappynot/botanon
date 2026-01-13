@@ -15,7 +15,7 @@ from aiogram.fsm.storage.memory import MemoryStorage
 from aiogram.types import Message, ReplyKeyboardMarkup, KeyboardButton, ReplyKeyboardRemove
 
 # ============= КОНФІГУРАЦІЯ =============
-BOT_TOKEN = os.getenv("8149744887:AAFO4Be3RehUyjoaV1sHa0gNOoTJB3hsuXo")  # 👈 Встановіть змінну середовища BOT_TOKEN
+BOT_TOKEN = ("8149744887:AAFO4Be3RehUyjoaV1sHa0gNOoTJB3hsuXo")  # 👈 Встановіть змінну середовища BOT_TOKEN
 ADMIN_IDS = [5893945619, 1320280691]  # Список ID адміністраторів
 
 # ============= СТАНИ FSM =============
@@ -249,3 +249,4 @@ if __name__ == "__main__":
         asyncio.run(main())
     except KeyboardInterrupt:
         print("\n👋 Бот зупинено")
+
