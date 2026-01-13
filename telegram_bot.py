@@ -14,8 +14,8 @@ from aiogram.fsm.storage.memory import MemoryStorage
 from aiogram.types import Message, ReplyKeyboardMarkup, KeyboardButton, ReplyKeyboardRemove
 
 # ============= КОНФІГУРАЦІЯ =============
-BOT_TOKEN = "8149744887:AAEusA2GD-YQKgWPznMwmP0HOKESvWiom50"  # 👈 Вставте сюди токен вашого бота
-ADMIN_ID = 5893945619, 1320280691
+BOT_TOKEN = "8149744887:AAFe9c3AeQAhhmlKg7oiSWljHAeirY5mwTg"  # 👈 Вставте сюди токен вашого бота
+ADMIN_IDS = [5893945619, 1320280691]  # Список ID адміністраторів
 
 # ============= СТАНИ FSM =============
 class FormStates(StatesGroup):
@@ -217,9 +217,10 @@ async def process_telegram(message: Message, state: FSMContext):
 ☆☆ ┄─   z Z  ๑ 🎐 ๑ z Z   ─┄  ☆☆
 ╼╼╼╼╼╼╼╼╼╴"""
     
-    # Відправка адміністратору
+    # Відправка адміністраторам
     try:
-        await bot.send_message(ADMIN_ID, application_text)
+        for admin_id in ADMIN_IDS:
+            await bot.send_message(admin_id, application_text)
     except Exception as e:
         print(f"Помилка відправки адміністратору: {e}")
     
@@ -247,5 +248,3 @@ if __name__ == "__main__":
         asyncio.run(main())
     except KeyboardInterrupt:
         print("\n👋 Бот зупинено")
-
-
