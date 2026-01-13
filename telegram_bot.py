@@ -4,6 +4,7 @@ Telegram бот для збору анкет користувачів
 """
 
 import asyncio
+import os
 import re
 from datetime import datetime
 from aiogram import Bot, Dispatcher, F
@@ -14,7 +15,7 @@ from aiogram.fsm.storage.memory import MemoryStorage
 from aiogram.types import Message, ReplyKeyboardMarkup, KeyboardButton, ReplyKeyboardRemove
 
 # ============= КОНФІГУРАЦІЯ =============
-BOT_TOKEN = "8149744887:AAFe9c3AeQAhhmlKg7oiSWljHAeirY5mwTg"  # 👈 Вставте сюди токен вашого бота
+BOT_TOKEN = os.getenv("8149744887:AAFO4Be3RehUyjoaV1sHa0gNOoTJB3hsuXo")  # 👈 Встановіть змінну середовища BOT_TOKEN
 ADMIN_IDS = [5893945619, 1320280691]  # Список ID адміністраторів
 
 # ============= СТАНИ FSM =============
