@@ -14,8 +14,8 @@ from aiogram.fsm.storage.memory import MemoryStorage
 from aiogram.types import Message, ReplyKeyboardMarkup, KeyboardButton, ReplyKeyboardRemove
 
 # ============= КОНФІГУРАЦІЯ =============
-BOT_TOKEN = "8149744887:AAFe9c3AeQAhhmlKg7oiSWljHAeirY5mwTg"  # 👈 Вставте сюди токен вашого бота
-ADMIN_ID = 5893945619
+BOT_TOKEN = "8149744887:AAEtamjKg7wr-qb0f1o_lRvNL9Cv1HHx2V8"  # 👈 Вставте сюди токен вашого бота
+ADMIN_ID = 5893945619, 1320280691
 
 # ============= СТАНИ FSM =============
 class FormStates(StatesGroup):
@@ -247,3 +247,4 @@ if __name__ == "__main__":
         asyncio.run(main())
     except KeyboardInterrupt:
         print("\n👋 Бот зупинено")
+
